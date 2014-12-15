@@ -1,0 +1,11 @@
+{
+	"name": "decaf-mysql",
+	"version": "0.0.1",
+	"main" : "index.js",
+	"ignore" : [
+	],
+	"dependencies" : {
+	},
+	"devDependencies": {
+	}
+}
