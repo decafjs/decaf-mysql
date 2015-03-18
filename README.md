@@ -24,6 +24,7 @@ Or you may add it to the java/ext dir in /usr/local/decaf or wherever your Decaf
 // Also see:
 // http://dailyjs.com/2011/12/19/silkjs-extjs/
 
+Schema.version = 'v1.0';
 Schema.add({
     name: 'Users',
     fields: [
@@ -206,4 +207,16 @@ Schema.extend('Base', {
     ]
 });
 // both SubClass1 and SubClass2 have created and edited fields in their tables
-```
+
+Schema provides two members, ```version``` and ```lastvVersion``` that are arbitrary strings.  The ```version``` member is set to 'v1' by default.  You may set it to anything you like, and likely will bump the version when you edit the schemas to make changes.  The ```lastVersion``` member is the value of the schema in the database at startup time before any changes are applied.  You may compare ```version``` to ```lastVersion``` to apply database migrations.
+
+
+Schema is observable.  It fires the following events:
+
+- beforeChange - before a schema change causes alter table statements to be executed.
+- afterChange - after a schema change has caused alter table statements to be executed.
+
+The handlers for these events are passed the schema that is about to or just has been altered.
+
+Additionally, a 'ready' event is fired after the schemas have all been processed (altered, created, onCreate called).
+
