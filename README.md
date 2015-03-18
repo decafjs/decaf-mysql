@@ -18,6 +18,7 @@ For OSX it is:
 
 Or you may add it to the java/ext dir in /usr/local/decaf or wherever your Decaf is installed.
 
+```javascript
 // Also see:
 // http://dailyjs.com/2011/12/19/silkjs-extjs/
 
@@ -203,4 +204,4 @@ Schema.extend('Base', {
     ]
 });
 // both SubClass1 and SubClass2 have created and edited fields in their tables
-
+```
