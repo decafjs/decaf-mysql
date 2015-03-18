@@ -18,6 +18,8 @@ For OSX it is:
 
 Or you may add it to the java/ext dir in /usr/local/decaf or wherever your Decaf is installed.
 
+## Schema (ORM)
+
 ```javascript
 // Also see:
 // http://dailyjs.com/2011/12/19/silkjs-extjs/
