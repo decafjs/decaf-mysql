@@ -207,6 +207,7 @@ Schema.extend('Base', {
     ]
 });
 // both SubClass1 and SubClass2 have created and edited fields in their tables
+```
 
 Schema provides two members, ```version``` and ```lastvVersion``` that are arbitrary strings.  The ```version``` member is set to 'v1' by default.  You may set it to anything you like, and likely will bump the version when you edit the schemas to make changes.  The ```lastVersion``` member is the value of the schema in the database at startup time before any changes are applied.  You may compare ```version``` to ```lastVersion``` to apply database migrations.
 
