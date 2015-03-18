@@ -20,9 +20,16 @@ Or you may add it to the java/ext dir in /usr/local/decaf or wherever your Decaf
 
 ## Schema (ORM)
 
+Also see:
+
+ - http://dailyjs.com/2011/12/19/silkjs-extjs/
+
+
+### Use
+
 ```javascript
-// Also see:
-// http://dailyjs.com/2011/12/19/silkjs-extjs/
+
+var Schema = require('decaf-mysql').Schema;
 
 Schema.version = 'v1.0';
 Schema.add({
